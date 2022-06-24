@@ -1,0 +1,73 @@
+.header
+    width 100%
+    height 60px
+    position fixed
+    top 0
+    left 0
+    z-index 2
+    background-color $bg-body-mob-color
+
+    @media(min-width 992px)
+        height auto
+        background none
+
+    .logo
+        width 75px
+        height 54px
+
+        @media(min-width 992px)
+            width 14.271vw
+            position absolute
+            top 5.421vw
+            left 50%
+            transform translateX(-50%)
+
+        @media(min-width 1200px)
+            top 5.177vw
+
+        @media(min-width 1200px)
+            top 5.052vw
+
+        img
+            margin -10px 0 0 -20px
+            width 150%
+
+            @media(min-width 992px)
+                margin-left -2.5vw
+                width 139%
+                margin-top -1.12vw
+
+    .content__center
+        height 100%
+        display flex
+        flex-wrap wrap
+
+    &__box
+        padding 24px 0 40px
+        max-width 320px
+        width 100%
+        height calc(100% - 60px)
+        position fixed
+        left calc(100% + 20px)
+        top 60px
+        overflow-y auto
+        background-color $bg-body-mob-color
+        transform translateX(0)
+        box-sizing border-box
+        transition transform 300ms ease
+
+        @media(min-width 992px)
+            padding 0
+            max-width 100%
+            height auto
+            display flex
+            flex-wrap wrap
+            justify-content space-between
+            position static
+            transform translateX(0)
+            background none
+            transition none
+            overflow-y visible
+
+        &.show
+            transform translateX(calc(-100% - 20px))

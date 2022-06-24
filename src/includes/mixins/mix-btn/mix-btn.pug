@@ -1,0 +1,23 @@
+mixin button(attrs)
+    if(attrs.type == 'link')
+        a(
+            href= attrs.btnUrl,
+            id= attrs.id ? attrs.id : false,
+            class= attrs.className ? attrs.className : ''
+        )
+            span.btn__text= attrs.label
+            if(attrs.icnUrl)
+                span.btn__icn
+                    img(src= attrs.icnUrl, alt="")
+    else
+        button(
+            id= attrs.id ? attrs.id : false,
+            class= attrs.className ? attrs.className : '',
+            type= attrs.type ? attrs.type : false,
+            name= attrs.fieldName ? attrs.fieldName : false,
+            disabled= attrs.disabled ? '' : false
+        )
+            span.btn__text= attrs.label
+            if(attrs.icnUrl)
+                span.btn__icn
+                    img(src= attrs.icnUrl, alt="")

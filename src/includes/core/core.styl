@@ -1,0 +1,221 @@
+html
+    font-size 62.5%
+
+html,
+body
+    height 100%
+
+body
+    min-width 320px
+    font-family 'Montserrat', sans-serif
+    line-height 14px
+    font-size 8px
+    font-weight 400
+    color $text-primary-color
+    letter-spacing .03em
+    background-color $bg-body-mob-color
+
+    @media(min-width 992px)
+        line-height 2.218vw
+        font-size 1.411vw
+
+
+header,
+aside,
+section,
+footer
+    display block
+
+/*placeholder styles*/
+::-webkit-input-placeholder
+    color rgba($black, .5)
+
+::-moz-placeholder
+    color rgba($black, .5)
+
+:-moz-placeholder
+    color rgba($black, .5)
+
+:-ms-input-placeholder
+    color rgba($black, .5)
+
+:focus::-webkit-input-placeholder
+    color transparent
+
+:focus::-moz-placeholder
+    color transparent
+
+:focus:-moz-placeholder
+    color transparent
+
+:focus:-ms-input-placeholder
+    color transparent
+
+img
+    width 100%
+    display block
+
+h1
+    line-height 30px
+    font-size 18px
+    font-weight 300
+    text-align center
+
+    @media(min-width 680px)
+        line-height 36px
+        font-size 26px
+        text-align left
+
+    @media(min-width 900px)
+        line-height 56px
+        font-size 36px
+
+    @media(min-width 992px)
+        line-height 4.427vw
+        font-size 2.865vw
+
+    @media(min-width 1600px)
+        line-height 3.788vw
+        font-size 2.778vw
+
+    strong
+        font-weight 600
+
+.title
+    margin-bottom 5px
+
+    @media(min-width 680px)
+        margin 20px 0 10px
+        width 320px
+
+    @media(min-width 900px)
+        margin 20px 0 10px
+        width 450px
+
+    @media(min-width 992px)
+        margin 1.667vw 0 0.833vw
+        width 50%
+
+    @media(min-width 1200px)
+        margin 1.250vw 0 0.625vw
+        width 50%
+
+    @media(min-width 1600px)
+        margin 0.505vw 0 0.505vw
+        width 58%
+
+.subtitle
+    margin 0 0 17px
+    display flex
+    justify-content center
+    line-height 16px
+    font-size 13px
+
+    @media(min-width 680px)
+        margin 0 0 25px
+        justify-content flex-start
+        line-height 24px
+        font-size 18px
+
+    @media(min-width 992px)
+        margin 0 0 2.083vw
+        line-height 2.5vw
+        font-size 2vw
+
+    @media(min-width 1200px)
+        line-height 2.083vw
+        font-size 1.667vw
+
+    span
+        padding-left 43px
+        position relative
+
+        &:before
+            content ''
+            margin-top 2px
+            width 37px
+            height 6px
+            position absolute
+            top 50%
+            left 0
+            background url(./../img/icn-dotted.svg) no-repeat left center
+            transform translateY(-50%)
+
+.wrapper
+    width 100%
+    min-height 100vh
+    display flex
+    flex-direction column
+    justify-content space-between
+    background url(./../img/bg-page-mob@x2.png) no-repeat right bottom
+    background-size 100% auto
+    overflow hidden
+
+    @media(min-width 992px)
+        background url(./../img/bg-page.jpg) no-repeat right bottom
+        background-size cover
+
+.main
+    padding-top 60px
+    min-height 100vh
+    box-sizing border-box
+
+    @media(min-width 992px)
+        padding-top calc(10vw + 44px)
+
+.content
+    padding-top 34px
+    box-sizing border-box
+
+    &--home
+        min-height calc(100vh - 60px)
+
+        @media(min-width 900px)
+            min-height auto
+
+        .content
+            &__center
+                min-height calc(100vh - 94px)
+                display flex
+                flex-direction column
+                justify-content space-between
+
+                @media(min-width 680px)
+                    padding-top 5vh
+                    min-height auto
+                    flex-direction row
+
+                @media(min-width 1600px)
+                    padding-top 0
+
+                .aside
+                    order 1
+
+                    @media(min-width 680px)
+                        order 0
+
+            &__column
+                margin 0 auto
+                width 100%
+                max-width 280px
+                box-sizing border-box
+
+                @media(min-width 680px)
+                    margin 0
+                    padding 0 0 0 70px
+                    max-width 100%
+
+    &__center
+        margin 0 auto
+        padding 0 22px
+        width 100%
+        max-width 1610px
+        position relative
+        box-sizing border-box
+
+        @media(min-width 992px)
+             padding 0 1.146vw
+
+        p
+            font-size 14px
+            line-height 22px

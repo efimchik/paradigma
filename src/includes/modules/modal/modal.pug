@@ -1,0 +1,26 @@
+include vars-modal
+
+.modal__overlay
+    .modal
+        .modal__close
+        .modal__dialog
+            .modal__header
+                h3 Быстро
+                    span оставить заявку
+                .modal__desc Введите номер, мы позвоним вам в течение 10 минут в рабочее время
+                .contacts__time
+                    span
+                        strong Пн-Пт
+                        |  9:00 - 18:00,
+                    span
+                        strong Сб
+                        |  10:00 - 18:00
+            form(action="")
+                label Введите номер телефона
+                input(type="tel" required name="phone" id="phone" class="field field__phone tel" value="")
+                +button(modalBtnSubmit)
+                .modal__checkbox
+                    input(type="checkbox" name="policy" id="policy" class="field__checkbox")
+                    label(for="policy") Нажимая кнопку вы соглашаетесь  с условиями
+                    a(href="##") Политики конфиденциальности
+        .modal__message.hide Ваше сообщение успешно отправлено! Мы позвоним вам в течение 10 минут в рабочее время.

@@ -1,0 +1,29 @@
+-
+    let menu = [
+        {url: '##', icn: true, active: true},
+        {url: '##', title: 'каталог'},
+        {url: '##', title: 'Преимущества'},
+        {url: '##', title: 'Примеры работ'},
+        {url: '##', title: 'монтаж'},
+        {url: '##', title: 'отзывы'},
+        {url: '##', title: 'Ответы на вопросы'},
+        {url: '##', title: 'контакты'}
+    ]
+
+nav.menu
+    ul.menu__list
+        each item in menu
+            if(item.active)
+                li.menu__item.active
+                    if(item.icn)
+                        a.menu__link(href= item.url)
+                            include ./icn-home
+                    else
+                        a.menu__link(href= item.url, data-text= item.title)= item.title
+            else
+                li.menu__item
+                    if(item.icn)
+                        a.menu__link(href= item.url)
+                            include ./icn-home
+                    else
+                        a.menu__link(href= item.url, data-text= item.title)= item.title

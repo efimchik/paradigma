@@ -1,0 +1,23 @@
+
+
+header.header
+    .content__center
+        .header__box
+            include ./menu/menu
+            include ./info/info
+            include ./../mod-social/social
+
+        .logo
+            picture
+                source(srcset="./img/logo@x2.webp", type="image/webp")
+                img(src="./img/logo@x2.png", alt="Академия кровли")
+        include ./../mod-contacts/contacts
+        include ./btn-menumob/btn-menumob
+
+        //- .logo
+        //-     picture
+        //-         source(srcset="./img/logo@x2.webp", type="image/webp")
+        //-         img(src="./img/logo@x2.png", alt="Академия кровли")
+
+        //- span HEADER
+        //- p HEADER px

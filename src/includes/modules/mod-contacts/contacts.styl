@@ -1,0 +1,71 @@
+.contacts
+    margin 0 0 0 27px
+    padding-top 10px
+    display inline-flex
+    flex-direction column
+    align-items center
+    position absolute
+    top 0
+    left 50%
+    transform translateX(-50%)
+    white-space nowrap
+
+    @media(min-width 992px)
+        margin 0
+        left auto
+        top 6.7vw
+        right 1.146vw
+        transform translateX(0)
+
+    &__time
+        margin-bottom 4px
+        line-height 9px
+        font-size 7px
+
+        @media(min-width 992px)
+            margin-bottom 0.208vw
+            line-height 0.781vw
+            font-size 0.625vw
+
+        span
+            &:first-child
+                margin-right 4px
+
+        strong
+            font-weight 700
+
+    &__phone
+        margin-bottom 4px
+        line-height 17px
+        font-size 14px
+        font-weight 600
+        letter-spacing 0.05em
+
+        @media(min-width 992px)
+            margin-bottom 0.208vw
+            line-height 1.406vw
+            font-size 1.146vw
+
+        a
+            color $text-primary-color
+            text-decoration none
+            transition color 300ms ease
+
+            &:hover
+                color $text-primary-hover
+
+    &__order
+        line-height 12px
+        font-size 10px
+        font-weight 600
+        color $text-secondary-color
+        border-bottom 2px dotted $text-secondary-color
+        cursor pointer
+        transition all 300ms
+
+        @media(min-width 992px)
+            line-height 0.781vw
+            font-size 0.625vw
+
+        &:hover
+            color $bg-btn-primary-hover

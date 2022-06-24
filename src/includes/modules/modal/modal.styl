@@ -1,0 +1,271 @@
+.modal
+    padding 3.646vw 4.948vw 4.688vw
+    max-width 28.646vw
+    width 100%
+    max-height 35.938vw
+    position relative
+    overflow-y auto
+    background url(./../img/bg-modal.png) no-repeat center
+    background-size cover
+    border-radius 35px
+    box-sizing border-box
+
+    @media(max-width 1600px)
+        padding 4.375vw 5.938vw 5.625vw
+        max-width 34.375vw
+        max-height 43.125vw
+
+    @media(max-width 992px)
+        padding 35px 45px 45px
+        max-width 380px
+        max-height 480px
+
+    @media(max-height 480px)
+        height 100%
+        border-radius 0
+
+    &__close
+        width 20px
+        height 20px
+        position absolute
+        top 2.344vw
+        right 2.448vw
+        cursor pointer
+
+        @media(max-width 1600px)
+            top 2.813vw
+            right 2.938vw
+
+        @media(max-width 992px)
+            top 20px
+            right 20px
+
+        &:before
+        &:after
+            content ''
+            margin-top -2px
+            width 100%
+            height 4px
+            position absolute
+            top 50%
+            left 0
+            border-radius 2px
+            background-color #A0A0A0
+            transition background-color 300ms ease
+
+        &:before
+            transform rotate(45deg)
+
+        &:after
+            transform rotate(-45deg)
+
+        &:hover
+            &:before
+            &:after
+                background-color $bg-btn-seconadry-color
+
+    &__overlay
+        width 100%
+        height 100%
+        display flex
+        align-items center
+        justify-content center
+        position fixed
+        top 0
+        left 0
+        z-index 3
+        opacity 0
+        visibility hidden
+        background-color rgba(#000, 0.5)
+        transition opacity 500ms ease
+
+        &.show
+            opacity 1
+            visibility visible
+
+    &__header
+        margin-bottom 1.458vw
+        text-align center
+
+        @media(max-width 1600px)
+            margin-bottom 1.750vw
+
+    h3
+        margin-bottom 0.729vw
+        line-height 2.083vw
+        font-size 1.563vw
+        color $text-primary-color
+        letter-spacing 0.02em
+
+        @media(max-width 1600px)
+            margin-bottom 0.875vw
+            line-height 2.500vw
+            font-size 1.875vw
+
+        @media(max-width 992px)
+            margin-bottom 12px
+            line-height 24px
+            font-size 18px
+
+        span
+            display block
+
+    &__desc
+    &__message
+        margin-bottom 1.250vw
+        line-height 1.250vw
+        font-size 0.833vw
+        color #000
+
+        @media(max-width 1600px)
+            margin-bottom 1.500vw
+            line-height 1.500vw
+            font-size 1vw
+
+        @media(max-width 992px)
+            margin-bottom 16px
+            line-height 20px
+            font-size 14px
+
+    &__message
+        margin-bottom 0
+        height 100%
+        display flex
+        align-items center
+        text-align center
+
+        @media(max-width 1600px)
+            margin-bottom 0
+            text-align center
+
+        @media(max-width 922px)
+            margin-bottom 0
+            text-align center
+
+        &.hide
+            display none
+
+    &__dialog
+        &.hide
+            display none
+
+    label
+        display block
+        line-height 0.781vw
+        font-size 0.625vw
+        color #000
+
+        @media(max-width 1600px)
+            line-height 0.938vw
+            font-size 0.750vw
+
+        @media(max-width 992px)
+            line-height 18px
+            font-size 12px
+
+    .field
+        margin 0.625vw 0 1.250vw
+        padding 0 15px
+        width 100%
+        height 4.427vw
+        border 0
+        border-radius 45px
+        background-color $bg-secondary-color
+        box-shadow 0px 0px 50px rgba(#000, 0.05)
+        box-sizing border-box
+
+        @media(max-width 1600px)
+            margin 0.750vw 0 1.500vw
+            height 5.313vw
+
+        @media(max-width 992px)
+            margin 6px 0 12px
+            height 60px
+
+        &__checkbox
+            position absolute
+            top 0
+            left 0
+            opacity 0
+            appearance none
+            pointer-events none
+
+    &__checkbox
+        margin-top 1.042vw
+        position relative
+
+        @media(max-width 1600px)
+            margin-top 1.25vw
+
+        @media(max-width 992px)
+            margin-top 12px
+
+        label
+            padding-left 38px
+            position relative
+            cursor pointer
+
+            &:before
+                content ''
+                width 18px
+                height 18px
+                position absolute
+                top 3px
+                left 0
+                border-radius 4px
+                background-color $bg-btn-seconadry-color
+
+            &:after
+                content ''
+                width 8px
+                height 6px
+                position absolute
+                top 9px
+                left 5px
+                opacity 0
+                background url(./../img/checked.svg) no-repeat center
+                transition opacity 300ms
+
+        .field__checkbox:checked + label:after
+            opacity 1
+
+        a
+            padding-left 38px
+            display block
+            line-height 0.781vw
+            font-size 0.625vw
+            color $text-primary-hover
+            text-decoration none
+
+            @media(max-width 1600px)
+                line-height 0.938vw
+                font-size 0.750vw
+
+            @media(max-width 992px)
+                line-height 18px
+                font-size 12px
+
+    .btn
+        max-width 100%
+        height 4.427vw
+        border-radius 45px
+
+        @media(max-width 1600px)
+            height 5.313vw
+
+        @media(max-width 992px)
+            height 60px
+
+        &.disabled
+            pointer-events none
+            opacity 0.5
+
+        &__icn
+            margin-left 10px
+            width 16px
+            height 16px
+            transform rotate(45deg)
+
+            &:hover
+                width 12px
+                height 12px

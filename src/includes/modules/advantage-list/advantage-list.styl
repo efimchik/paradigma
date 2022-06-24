@@ -1,0 +1,200 @@
+.advantage-list
+    margin 70px auto 0
+    padding 30px 0
+    width 200px
+    height auto
+    max-height 100px
+    position relative
+    overflow hidden
+    box-shadow 0px 0px 75px rgba(#000, 0.03)
+    box-sizing border-box
+    transition max-height 500ms ease
+
+    @media(min-width 680px)
+        margin-top 0
+        width 225px
+        max-height inherit
+        box-shadow none
+
+    @media(min-width 992px)
+        width 18.750vw
+
+    @media(min-width 1200px)
+        width 14.063vw
+
+    @media(min-width 1600px)
+        width 11.719vw
+
+    &:before
+        content ''
+        width 100%
+        height 60px
+        transform rotate(5deg)
+        position absolute
+        top 7px
+        left -1px
+        border-radius 20px 20px 0 0
+        box-shadow 0px 0px 75px rgba(#000, 0.03)
+        background-color $bg-secondary-color
+
+        @media(min-width 680px)
+            box-shadow none
+
+    &.show
+        max-height 500px
+
+        .advantage-list
+            &__bg
+                border-radius 0 0 20px 20px
+
+            &__btn
+                transform rotate(405deg)
+
+                &:before
+                &:after
+                    opacity 0
+                    animation none
+
+    &__btn
+        width 32px
+        height 32px
+        position absolute
+        top 30px
+        right 14px
+        z-index 1
+        background-color $bg-btn-seconadry-color
+        border-radius 50%
+        cursor pointer
+        transition all 600ms ease
+
+        @media(min-width 680px)
+            display none
+
+        &:before
+        &:after
+            content ''
+            position absolute
+            top 50%
+            left 50%
+            transform translate(-50%, -50%)
+            border 2px solid $bg-btn-seconadry-color
+            border-radius 50%
+            box-sizing border-box
+
+        &:before
+            width 36px
+            height 36px
+            animation scale 1.1s 0.1s linear infinite
+
+        &:after
+            width 38px
+            height 38px
+            animation scale 1.1s linear infinite
+
+        &:hover
+            transform rotate(405deg)
+
+            &:before
+            &:after
+                opacity 0
+                animation none
+
+        span
+            width 10px
+            height 10px
+            position absolute
+            top 50%
+            left 50%
+            transform translate(-50%, -50%)
+
+            &:before
+            &:after
+                content ''
+                position absolute
+                background-color $bg-secondary-color
+
+            &:before
+                width 100%
+                height 2px
+                top 50%
+                left 0
+                transform translateY(-50%)
+
+            &:after
+                width 2px
+                height 100%
+                top 0
+                left 50%
+                transform translateX(-50%)
+
+    &__bg
+        width 100%
+        position relative
+        background-color $bg-secondary-color
+
+        @media(min-width 680px)
+            border-radius 0 0 20px 20px
+
+    &__item
+        padding 0 65px 20px 23px
+        line-height 17px
+        font-size 10px
+        background url(./../img/advantage-shadow.png) no-repeat center bottom
+        box-sizing border-box
+
+        @media(min-width 680px)
+            padding 0 45px 20px 23px
+            line-height 20px
+            font-size 14px
+
+        @media(min-width 992px)
+            padding 0 2.5vw 1.667vw 2.5vw
+            line-height 1.833vw
+            font-size 1.167vw
+            text-align center
+
+        @media(min-width 1200px)
+            padding 0 1.875vw 1.250vw 1.875vw
+            line-height 1.375vw
+            font-size 0.875vw
+
+        @media(min-width 1600px)
+            padding 0 1.563vw 1.042vw 1.563vw
+            line-height 1.146vw
+            font-size 0.729vw
+
+        &:last-child
+            background none
+
+        strong
+            font-weight 700
+
+
+
+@-webkit-keyframes scale
+    0%
+        -webkit-transform: translate(-50%, -50%) scale(0.8);
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0;
+    50%
+        -webkit-transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.3;
+    100%
+        -webkit-transform: translate(-50%, -50%) scale(1.2);
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0;
+
+@keyframes scale
+    0%
+        -webkit-transform: translate(-50%, -50%) scale(0.8);
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0;
+    50%
+        -webkit-transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.3;
+    100%
+        -webkit-transform: translate(-50%, -50%) scale(1.2);
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0;

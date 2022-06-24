@@ -1,0 +1,74 @@
+.btn-menu
+    width 20px
+    height 16px
+    position absolute
+    top 50%
+    right 22px
+    opacity 1
+    visibility visible
+    transform translateY(-50%)
+    cursor pointer
+
+    @media(min-width 992px)
+        opacity 0
+        visibility hidden
+
+    span
+        display block
+        position absolute
+        width 50%
+        height 2px
+        background $black
+        opacity 1
+        transform rotate(0)
+        transition 250ms ease-in-out
+
+        &:first-child
+            top 0
+            left 0
+
+        &:nth-child(2)
+            top 0
+            left 50%
+
+        &:nth-child(3)
+            top 7px
+            left 0
+
+        &:nth-child(4)
+            top 7px
+            left 50%
+
+        &:nth-child(5)
+            bottom 0
+            left 0
+
+        &:nth-child(6)
+            bottom 0
+            left 50%
+
+    &--open
+        span
+            &:first-child
+            &:nth-child(6)
+                transform rotate(45deg)
+
+            &:nth-child(2)
+            &:nth-child(5)
+                transform rotate(-45deg)
+
+            &:nth-child(3)
+                left -50%
+                opacity 0
+
+            &:nth-child(4)
+                left 100%
+                opacity 0
+
+            &:first-child
+            &:nth-child(2)
+                top 3px
+
+            &:nth-child(5)
+            &:nth-child(6)
+                bottom 3px

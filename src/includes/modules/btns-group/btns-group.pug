@@ -1,0 +1,11 @@
+include ./vars-btns-group
+
+.btns__group
+    .btns__box
+        .btns__box-label
+            .btns__box-icn
+                img(src="./img/icn-hover.svg", alt="icon hover")
+            strong Ответьте на несколько вопросов и получите
+            |  сметную стоимость и 3 подарка за экономию нашего времени
+        +button(calcCost)
+    +button(viewObjects)

@@ -1,0 +1,88 @@
+.menu
+    width 100%
+
+    @media(min-width 992px)
+        border-bottom 1px solid rgba($text-primary-color, 0.07)
+
+    &__list
+        margin-bottom 32px
+        width 100%
+        display flex
+        flex-direction column
+        align-items center
+
+        @media(min-width 992px)
+            margin 0
+            padding 2.083vw 0 1.927vw
+            flex-direction row
+            justify-content space-between
+
+
+    &__item
+        margin-top 20px
+        position relative
+
+        @media(min-width 992px)
+            margin-top 0
+
+        &:first-child
+            margin-top 0
+
+            a
+                &:before
+                    display none
+        path
+            transition all 300ms ease
+
+        &:hover
+            path
+                fill $text-primary-hover
+
+            a
+                color $text-primary-hover
+
+                &:before
+                    width 100%
+
+        &.active
+            path
+                fill $text-primary-hover
+
+            a
+                color $text-primary-hover
+
+    &__link
+        display block
+        line-height 14px
+        font-size 10px
+        color $text-primary-color
+        font-weight 500
+        text-decoration none
+        text-transform uppercase
+        white-space nowrap
+        letter-spacing 0.05em
+        position relative
+        transition all 300ms ease
+
+        &:before
+            content ''
+            width 0
+            height 1px
+            position absolute
+            top 100%
+            left 50%
+            transform translateX(-50%)
+            background-color $text-primary-hover
+            transition width 300ms
+
+        @media(min-width 992px)
+            line-height 1.411vw
+            font-size 1.008vw
+
+        @media(min-width 1200px)
+            line-height 1.167vw
+            font-size 0.833vw
+
+        @media(min-width 1600px)
+            line-height 1.042vw
+            font-size 0.729vw
